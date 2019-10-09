@@ -5,8 +5,10 @@ University of South Florida Manuscript Class]
 % Heavily modified by Jean-Baptiste Subils (jbsubils@gmail.com) in 2019 when a lot of changes were requested from graduate studies.
 %I hacked my way through it. It may not work for your needs but adapt it and share with other :)
 
-\RequirePackage{setspace} %add any package needed
-
+% ------------------------------------------------------------------------------
+%  Add Additional Packages here
+% ------------------------------------------------------------------------------
+\RequirePackage{setspace,etoolbox}
 
 \newcommand\@ptsize{}
 \newif\if@frontmatter
@@ -873,7 +875,6 @@ University of South Florida Manuscript Class]
 }
 
 % \AtBeginDocument{
-\RequirePackage{etoolbox}
 \AfterEndPreamble{
   % next four lines add the sheet numbering to page numbering
   \countdef\c@sheet=1
