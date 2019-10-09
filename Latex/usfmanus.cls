@@ -2,11 +2,13 @@
 \ProvidesClass{usfmanus}[2019/09/15 2.0 jbsubils
 University of South Florida Manuscript Class]
 
-% Heavily modified by Jean-Baptiste Subils (jbsubils@gmail.com) in 2019 when a lot of changes were requested from graduate studies. 
+% Heavily modified by Jean-Baptiste Subils (jbsubils@gmail.com) in 2019 when a lot of changes were requested from graduate studies.
 %I hacked my way through it. It may not work for your needs but adapt it and share with other :)
 
-\RequirePackage{setspace} %add any package needed
-
+% ------------------------------------------------------------------------------
+%  Add Additional Packages here
+% ------------------------------------------------------------------------------
+\RequirePackage{setspace,etoolbox}
 
 \newcommand\@ptsize{}
 \newif\if@frontmatter
@@ -44,7 +46,7 @@ University of South Florida Manuscript Class]
 }
 \ExecuteOptions{10pt,final,frontmatter}
 \ProcessOptions
-    
+
 \input{size1\@ptsize.clo}
 \setlength\lineskip{1\p@}
 \setlength\normallineskip{1\p@}
@@ -164,7 +166,7 @@ University of South Florida Manuscript Class]
       \bfseries \@chapapp\space\thechapter:\space#1 \par
     \fi
 %    \vspace*{1000\p@}
-    
+
     \par\nobreak
     \vspace*{20\p@}}
   % HJG: The following line controls spacing in the chapters
@@ -419,7 +421,7 @@ University of South Florida Manuscript Class]
       %\hyphenpenalty=10000\exhyphenpenalty=10000%
       \parindent \z@ \rightskip \@pnumwidth
       \parfillskip -\@pnumwidth
-      \leavevmode 
+      \leavevmode
       \advance\leftskip\@tempdima
       \hskip -\leftskip
       {#1}%
@@ -806,8 +808,8 @@ University of South Florida Manuscript Class]
   \fi}
 
 
-\renewcommand\footnoterule{% 
-  \kern-3\p@ 
+\renewcommand\footnoterule{%
+  \kern-3\p@
   \hrule width .4\columnwidth
   \kern 2.6\p@}
 \@addtoreset{footnote}{chapter}
@@ -872,7 +874,8 @@ University of South Florida Manuscript Class]
   \newpage
 }
 
-\AtBeginDocument{
+% \AtBeginDocument{
+\AfterEndPreamble{
   % next four lines add the sheet numbering to page numbering
   \countdef\c@sheet=1
   \def\thesheet{\@arabic\c@sheet}
