@@ -8,7 +8,7 @@ Tested and working on:
 - **Overleaf**
 - **Latexmk** (waiting on confirmation to accept PR)
 
-Miktex should work too. Someone told me that `\RequirePackage{color}` needed to be added but I'm not sure where. I blieve (here)[https://github.com/jailby/dissertation_template/blob/master/Latex/usfmanus.cls#L8], so if you are using miktex and can confirm that pls send a PR :)
+Miktex should work too. Someone told me that `\RequirePackage{color}` needed to be added but I'm not sure where. I blieve [here](https://github.com/jailby/dissertation_template/blob/master/Latex/usfmanus.cls#L8), so if you are using miktex and can confirm that pls send a PR :)
 
 # Modifications
 
