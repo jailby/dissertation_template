@@ -1,0 +1,91 @@
+\documentclass[12pt,frontmatter,copyright,dissertation]{usfmanus}
+\usepackage[bottom=1in, left=1in, right=1in, top=1in]{geometry}
+\usepackage[utf8]{inputenc}
+
+\usepackage{ifpdf}
+\ifpdf %This ensure proper paper size (some compiler like overleaf mess it up)
+  \pdfpageheight=11in
+  \pdfpagewidth=8.5in
+\else
+  \special{papersize=11in,8.5in}
+\fi
+
+\usepackage{multirow}
+\usepackage{url} \urlstyle{same} %To keep same font for url
+
+\usepackage{graphicx}
+\usepackage{adjustbox}
+
+\usepackage{floatrow}
+\usepackage[center,labelfont=bf]{caption} % used to make the tables label bold
+\floatsetup[table]{capposition=top}
+
+%my packages:
+\usepackage{tikz} 
+\usepackage[geometry]{ifsym} %for graphs
+\usepackage{subfigure}
+    
+\newcommand{\specialcell}[2][c]{% This allows for a cell in a tab to be on two rows (in table example
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+  
+
+\usepackage{color, colortbl} % use to higlight tables
+\definecolor{Gray}{gray}{0.9}
+%\definecolor{Cyan}{rgb}{0.5,1,1}
+%\definecolor{Green}{rgb}{0.3, 1, 0.3}
+
+
+\usepackage{amssymb} % use just for the tilde right now
+\usepackage{appendix}
+
+
+
+\usepackage{lipsum} % Just for the template. to be deleted
+
+
+
+
+
+\title{PhD Dissertation Template} % Title
+\author{Jean-Baptiste Subils} % Author
+\degree{Doctor of Philosophy in Computer Science and Engineering}
+\department{Computer Science and Engineering} 
+\college{Engineering} 
+\majorprofessor{Ya Major Prof} 
+\members{First Member, Ph.D. \and Second, Ph.D.\and Third, Ph.D. \and Last, Ph.D.} 
+\presentdate{last signature date}
+\keywords{Five, Keywords, Not, In, Title}
+%\graddate{May, 2017} 
+\copyrightyear{\the\year}
+
+%\caption[first sentence.]{first sentence. Second sentence. The thing between the bracket is the short title.}
+
+\abstract{
+
+This is a template.
+
+\lipsum[1-2]
+
+}
+\acknowledgments{Just to test.} % Optional
+
+\begin{document}
+
+
+\include{chapters/Intro}
+
+\nocite{JB_Diss} % I will appreciate if you cite my diss as I provided you with a template. You can cite within your text if you prefer.
+
+\begin{spacing}{1}
+\interlinepenalty=10000 %prevent spliting entry between pages
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{spacing}
+
+\begin{appendices}
+\include{appendixes}
+\end{appendices}
+
+%
+
+\end{document}
