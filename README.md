@@ -19,4 +19,5 @@ Good luck :)
 # Thanks
 
 Thanks to [anwesht](https://github.com/anwesht/) for the PR to make it work for Latexmk
+
 Thanks to Zach Beasley for the tip for Miktex
