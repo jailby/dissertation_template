@@ -11,9 +11,9 @@ Tested and working on:
 Miktex should work too. Someone told me that 
 
 ### Miktex issues:
-- `\RequirePackage{color}` may be needed. I believe [here](https://github.com/jailby/dissertation_template/blob/master/Latex/usfmanus.cls#L11), so if you are using miktex and can confirm that pls send a PR :)
+- `\RequirePackage{color}` may be needed. I believe [here](https://github.com/jailby/dissertation_template/blob/master/Latex/usfmanus.cls#L11). This may be fixed by [PR #1](https://github.com/jailby/dissertation_template/pull/1). If you are using miktex and can confirm that pls send a PR :)
 - "Table" and "Figure" labels don't show properly in the lot and lof. **Solution:** [for lot](https://github.com/jailby/dissertation_template/blob/master/Latex/usfmanus.cls#L375) and [for lof](https://github.com/jailby/dissertation_template/blob/master/Latex/usfmanus.cls#L358) the label, Figure or Table, should be added before `\ifnum` (This is a hack). I believe that by default it should add the label but Miktex may need it explicitly or something else is conflicting with the label. 
-- lof and lot are not double spaced. **Solution:**  [for lot](https://github.com/jailby/dissertation_template/blob/master/Latex/usfmanus.cls#L453) and [for lof](https://github.com/jailby/dissertation_template/blob/master/Latex/usfmanus.cls#L443) replace those lines by `\doublespace`. Other compilers seem to overide this command, if you got time to modify it send a PR :)
+
 
 # Contributions
 
