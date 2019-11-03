@@ -440,7 +440,7 @@ University of South Florida Manuscript Class]
   \chapter*{\vspace{-.1in}\listfigurename
     \@mkboth{\listfigurename}{\listfigurename}}%
   \vspace*{11\p@}
-  \singlespace
+  \doublespace
   % ********** Look at document tocolft.pdf to make changes to lof layout**************
   \@starttoc{lof}}%
 \newcommand\l@figure{\@dottedtocline{0}{0pt}{6em}} %5em}}
@@ -450,7 +450,7 @@ University of South Florida Manuscript Class]
     \@mkboth{\listtablename}{\listtablename}}%
   \vspace*{11\p@}
   \pagestyle{myotherheadings}
-    \singlespace
+    \doublespace
   \@starttoc{lot}}%
 %\newcommand\l@table{\@dottedtocline{0}{0pt}{4em}} %5em}}
 \let\l@table\l@figure
